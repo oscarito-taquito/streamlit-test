@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 # Set the title of the app
-st.title("Interactive Histogram with Multiplier")
+st.title("Interactive Histogram with Value Multiplier")
 
 # Generate dummy data
 data = np.random.normal(loc=0, scale=1, size=1000)
@@ -15,7 +15,7 @@ multiplier = st.slider("Select a multiplier for the histogram values:", 0.1, 25.
 modified_data = data * multiplier
 
 # Create a histogram using Pandas
-hist_values, bin_edges = np.histogram(modified_data, bins=30)
+hist_values, bin_edges = np.histogram(modified_data, bins=45)
 hist_df = pd.DataFrame({
     "Bins": bin_edges[:-1],   # The left edges of the bins
     "Frequency": hist_values  # The counts in each bin
