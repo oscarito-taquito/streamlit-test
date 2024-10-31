@@ -9,7 +9,7 @@ st.title("Interactive Histogram with Multiplier")
 data = np.random.normal(loc=0, scale=1, size=1000)
 
 # Create an input slider to multiply the values
-multiplier = st.slider("Select a multiplier for the histogram values:", 0.1, 5.0, 1.0)
+multiplier = st.slider("Select a multiplier for the histogram values:", 0.1, 25.0, 1.0)
 
 # Multiply the data by the selected multiplier
 modified_data = data * multiplier
